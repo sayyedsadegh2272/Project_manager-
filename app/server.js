@@ -1,3 +1,5 @@
+const { AllRoutes } = require("./router/router");
+//https://ditty.ir/courses/es6/classes/5vV95#constructor-method اطلاعات در مورد کلاس ها
 module.exports = class Application {
     #express = require("express");
     #app = this.#express();
@@ -39,11 +41,22 @@ module.exports = class Application {
         });
     }
     createRoutes(){
-        this.#app.get("/" , (req , res , next) => {
+        this.#app.get("/" , (req , res , next) => { // این می شه صحفه اصلی سایت
             return res.json({
                 massage : "this is a new Express application"
             })
-        })
+        });
+        this.#app.use(AllRoutes)
+
+        // this.#app.use((err , req , res , next) =>{ // ما تو بدنه متود های از تری کچ استفاده می کنیم تا برای مهار کردن خطا و سپس انجام اقدام مناسب استفاده می‌کنیم.
+        //     // اینجا قرارش می دیم و تمام روت ها مون می فرستیم توش 
+        //     // دیگه اگه زمانی هم یادمون رفت جایی از ترای کچ استفاده کنیم این کافیه براش
+        //     try {
+        //         this.#app.use(AllRoutes)
+        //     } catch (error) {
+        //         next(error)
+        //     }
+        // })
     }
     
 }
