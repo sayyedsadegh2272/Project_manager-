@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema({
     team : {type : [mongoose.Types.ObjectId], default : []},// ممکنه شخص عضو تیم خاصی هم نباشه
     // چرا دیفالت ها رو آرایه تعریف کردی : چون چند احتمال وجود داره مثلا هم شخص یوزر باشه هم مدیر هم ...یا طرف عضو 5 تیم متفاوت باشه
     // تایپ رو ، آرایه ای از آبجکت آیدی های تیم ها قرار دادیم
+    token : {type : String , default :""}
 },
 {
     timestamps : true
