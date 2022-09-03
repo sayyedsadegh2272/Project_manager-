@@ -8,6 +8,7 @@ const UserSchema = new mongoose.Schema({
     // نکته خیلی مهم : وقتی دیفالت رو آرایه ای از استرینگ ها قرار دادی حتما باید تایپ رو آرایه ای از استرینگ بزاری
     email : {type : String , required : true , unique : true},
     password : {type : String , required : true},
+    profile_image : {type : String , required : false},
     skills : {type : [String], default : []},//دیفالت رو آرایه خالی گذاشتیم چون ممکنه شخص مهارت داشته باشه ممکنه مهارت خاصی هم نداشته باشه
     team : {type : [mongoose.Types.ObjectId], default : []},// ممکنه شخص عضو تیم خاصی هم نباشه
     // چرا دیفالت ها رو آرایه تعریف کردی : چون چند احتمال وجود داره مثلا هم شخص یوزر باشه هم مدیر هم ...یا طرف عضو 5 تیم متفاوت باشه
