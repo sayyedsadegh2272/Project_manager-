@@ -7,6 +7,7 @@ const ProjectSchema = new mongoose.Schema({
     team : {type : mongoose.Types.ObjectId},//کدوم تیم روش کار می کنه
     Private : {type : Boolean , default : true},
     // ما مقدار پرایوت از نوع بولین و دیفالت اون رو خصوصی بودن قرار دادیم
+    tags : {type : [String] , default : []}, 
 } , {
     timestamps : true
 });
