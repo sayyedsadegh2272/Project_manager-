@@ -10,7 +10,7 @@ const ProjectSchema = new mongoose.Schema({
 } , {
     timestamps : true
 });
-const TeamModel = mongoose.model("project", ProjectSchema); // تو دیتابیس برو و یک دیتای جدید بساز اسمش بزار یوزر چون دیتابیس یه اس اضافه می کنه بهش و می شه یوزرز 
+const ProjectModel = mongoose.model("project", ProjectSchema); // تو دیتابیس برو و یک دیتای جدید بساز اسمش بزار یوزر چون دیتابیس یه اس اضافه می کنه بهش و می شه یوزرز 
 module.exports = {
-    TeamModel
+   ProjectModel
 }
